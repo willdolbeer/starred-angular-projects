@@ -8,6 +8,8 @@ This project retrieves and displays the Angular-related repositories with the mo
 - `RouterModule` config was included in `app.module.ts` instead of a separate file
 - All CSS is contained in a single `style.css` instead of bundling styles for each component
 
+The two project components contain identical functions. This was done to make use of multiple views using the Angular router.
+
 ## Prerequisites
 
 Install the latest version of [Angular CLI](https://github.com/angular/angular-cli)
