@@ -1,0 +1,22 @@
+<div class="form-inline">
+	<select class="form-control" [(ngModel)]="field" ngbTooltip="Select field to filter by">
+		<option value="name">Name</option>
+		<option value="description">Description</option>
+	</select>
+	<input class="form-control" type="text" placeholder="Search terms" [(ngModel)]="search" ngbTooltip="Enter keywords to search for" />
+</div>
+<div class="card" *ngFor="let project of projects | filter:field:search">
+	<div class="card-header">
+		<img class="float-right" [src]="project.owner.avatar_url" >
+		<h5>{{project.owner.login}}</h5>
+	</div>
+	<div class="card-body">
+		<h5 class="card-title">{{project.name}}</h5>
+		<h6 class="text-muted"><span class="badge badge-info">{{project.stargazers_count}}</span> stars</h6>
+		<div class="card-text">{{project.description}}</div>
+		<button class="btn btn-secondary btn-sm" (click)="showDetail(project)">View Details</button>
+	</div>
+</div>
+<div class="alert alert-warning" *ngIf="projects && (projects | filter:field:search).length === 0" role="alert">
+	No projects match the search terms
+</div>

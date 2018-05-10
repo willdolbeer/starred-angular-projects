@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+.form-inline {
+	margin: 5px 0;
+}
+.form-control {
+	margin-right: 5px;
+}
+.table thead th {
+	white-space: nowrap;
+}
+.table-hover tbody tr {
+	cursor: pointer;
+}
+.card {
+	height: 325px;
+	width: 31%;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+.card-header > img,
+.modal-header > img,
+.modal-body td > img {
+	height: 64px;
+	width: 64px
+}
+.card-text {
+	height: 100px;
+	overflow: auto;
+	margin-bottom: 5px;
+}
+@media (max-width: 992px) {
+	.card {
+		width: 48%;
+	}
+}
+@media (max-width: 576px) {
+	.form-control {
+		margin-right: 0;
+		margin-bottom: 5px;
+	}
+	.card {
+		width: 100%;
+		height: auto;
+	}
+	.card-text {
+		height: auto;
+	}
+}

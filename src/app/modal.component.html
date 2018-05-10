@@ -1,0 +1,46 @@
+<div class="modal-header">
+	<h4 class="modal-title">{{project.name}}</h4>
+	<button type="button" class="close" aria-label="Close" (click)="projectModal.dismiss('Cross click')">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+<div class="modal-body">
+	<table class="table table-borderless table-sm">
+		<tbody>
+			<tr>
+				<td colspan="2"><img [src]="project.owner.avatar_url" ></td>
+			</tr>
+			<tr>
+				<th class="text-right">Owner</th>
+				<td>{{project.owner.login}}</td>
+			</tr>
+			<tr>
+				<th class="text-right">ID</th>
+				<td>{{project.id}}</td>
+			</tr>
+			<tr>
+				<th class="text-right">Description</th>
+				<td>{{project.description}}</td>
+			</tr>
+			<tr>
+				<th class="text-right">Stars</th>
+				<td>{{project.stargazers_count}}</td>
+			</tr>
+			<tr>
+				<th class="text-right">URL</th>
+				<td><a [href]="project.html_url" target="_blank">{{project.html_url}}</a></td>
+			</tr>
+			<tr>
+				<th class="text-right">Created</th>
+				<td>{{project.created_at | date:"medium"}}</td>
+			</tr>
+			<tr>
+				<th class="text-right">Last Push</th>
+				<td>{{project.pushed_at | date:"medium"}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-outline-dark" (click)="projectModal.close('Close click')">Close</button>
+</div>
