@@ -19,15 +19,17 @@ export class ProjectListComponent implements OnInit {
     ) {}
     
     getProjects() {
+        // Get project list from project service
         this.projectService.getProjects()
             .subscribe((res: any) => {
                 this.projects = res.json().items;
-                // Change search parameter to trigger filter after list is loaded, otherwise will list not display
+                // Change search parameter to trigger filter after list is loaded, otherwise list will not display
                 this.search = '';
             });
     }
     
     showDetail(project: any) {
+        // Open modal with full details
         const modalRef = this.modalService.open(ModalComponent);
         modalRef.componentInstance.project = project;
     }
