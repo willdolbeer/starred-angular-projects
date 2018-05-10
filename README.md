@@ -1,27 +1,30 @@
 # StarredAngularProjects
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## Description
 
+This project retrieves and displays the Angular-related repositories with the most stars. It was built using [Angular](https://github.com/angular/angular) 6.0.0, [Bootstrap](https://github.com/twbs/bootstrap) 4.1.1 and [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap). Due the small size of this project, the following considerations were taken:
+
+- A flat file structure was used
+- `RouterModule` config was included in `app.module.ts` instead of a separate file
+- All CSS is contained in a single `style.css` instead of bundling styles for each component
+
+The two project components contain identical functions. This was done to make use of multiple views using the Angular router.
+
+## Prerequisites
+
+Install the latest version of [Angular CLI](https://github.com/angular/angular-cli)
+
+## Installation
+
+To install on your local machine, run the following from the command line:
+
+    git clone https://github.com/willdolbeer/starred-angular-projects.git
+    cd starred-angular-projects
+    npm install
+    
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
