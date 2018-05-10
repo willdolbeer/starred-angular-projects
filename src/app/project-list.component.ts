@@ -22,8 +22,8 @@ export class ProjectListComponent implements OnInit {
         this.projectService.getProjects()
             .subscribe((res: any) => {
                 this.projects = res.json().items;
+                // Change search parameter to trigger filter after list is loaded, otherwise will list not display
                 this.search = '';
-                console.log(this.projects);
             });
     }
     
@@ -34,7 +34,6 @@ export class ProjectListComponent implements OnInit {
 
     ngOnInit() {
         this.getProjects();
-        console.log(this.field);
     }
 
 }
